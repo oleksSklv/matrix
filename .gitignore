@@ -1,0 +1,13 @@
+# Результати збірки
+*.exe
+*.obj
+*.pdb
+*.ilk
+*.idb
+build/
+
+# Visual Studio
+.vs/
+
+# Конфігурація VS Code (прив'язана до конкретного ПК)
+.vscode/
