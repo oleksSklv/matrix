@@ -86,7 +86,11 @@ Matrix Matrix::operator+(const Matrix& other) const {
   }
   return result_mx;
 }
-Matrix Matrix::operator*(int a) {
+Matrix Matrix::operator-(const Matrix& other) const {
+  /* Overloading - operator for two matrices */
+  return (*this + (other * -1));
+}
+Matrix Matrix::operator*(int a) const {
   /* Overloading * operator for multiplying matrix by scalar */
   Matrix result_mx(Matrix::rows_, Matrix::cols_);
   for (int i = 0; i < Matrix::rows_; i++) {

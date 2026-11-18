@@ -12,8 +12,9 @@ class Matrix {
   //  cols_ - number of columns in the matrix
   //
   // Features:
+  //  - opitimized useage of memory (move constructors for methods is included)
   //  - writing data to the matrix and its formatted output
-  //  - overloading of the multiplication operator (multiplying a matrix by a scalar and by another matrix)
+  //  - overloading of the multiplication operator (matr*scalar & matr*matr)
   //  - overloading of the matrix addition operator
   //  - overloading of the assignment and comparison operators
   //  - overloading of the matrix element access operator ()
@@ -59,8 +60,11 @@ class Matrix {
   /* Overloading + operator for two matrices */
   Matrix operator+(const Matrix& other) const;
 
+  /* Overloading - operator for two matrices */
+  Matrix operator-(const Matrix& other) const;
+
   /* Overloading * operator for multiplying matrix by scalar */
-  Matrix operator*(int a);
+  Matrix operator*(int a) const;
 
   /* Overloading * operator for multiplying matrix by another matrix */
   Matrix operator*(const Matrix& other) const;

@@ -2,6 +2,8 @@
 
 int main () {
   Matrix g = Matrix(5,5);
+  Matrix m = Matrix(5,5);
+  m.SetIdentity();
 
   g(0, 0) = 0;
   g(0, 1) = 1;
@@ -32,6 +34,8 @@ int main () {
   g(4, 2) = 6;
   g(4, 3) = 7;
   g(4, 4) = 0;
+
+  g = g-m;
 
   g.Print();
 }
